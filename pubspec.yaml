@@ -1,0 +1,21 @@
+name: flutter_result
+description: >
+  Explicit and readable Result handling for Dart & Flutter.
+  Model success and failure without exceptions, nulls, or deeply nested conditionals.
+version: 0.0.1
+homepage: https://github.com/HylkeReinders/flutter_result
+repository: https://github.com/HylkeReinders/flutter_result
+issue_tracker: https://github.com/HylkeReinders/flutter_result/issues
+
+environment:
+  sdk: ^3.10.4
+  flutter: ">=3.3.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0

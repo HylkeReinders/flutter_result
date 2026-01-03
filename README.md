@@ -9,33 +9,33 @@ It is designed for production codebases where clarity and long-term maintainabil
 ## The problem
 
 In many Dart and Flutter codebases, failure is handled using:
-• try/catch blocks scattered across layers
-• nullable return values with implicit meaning
-• exceptions used for control flow
-• deeply nested if statements
+- try/catch blocks scattered across layers
+- nullable return values with implicit meaning
+- exceptions used for control flow
+- deeply nested if statements
 
 These approaches tend to:
-• hide failure paths
-• make flows harder to read
-• complicate testing
-• break down as codebases grow
+- hide failure paths
+- make flows harder to read
+- complicate testing
+- break down as codebases grow
 
 This package exists to make success and failure explicit, predictable, and readable.
 
 ## Design goals
 
-• Explicit control flow over hidden magic
-• Readable code that still makes sense a year later
-• Small, focused API surface
-• No dependency on functional programming frameworks
-• Easy integration with Bloc and layered architectures
+- Explicit control flow over hidden magic
+- Readable code that still makes sense a year later
+- Small, focused API surface
+- No dependency on functional programming frameworks
+- Easy integration with Bloc and layered architectures
 
 ## Non-goals
 
-• This is not a full functional programming library
-• This does not try to replace exceptions everywhere
-• This does not introduce code generation
-• This is not designed to be “clever”
+- This is not a full functional programming library
+- This does not try to replace exceptions everywhere
+- This does not introduce code generation
+- This is not designed to be “clever”
 
 If you are looking for advanced FP constructs or heavy abstractions, this package is likely not a good fit.
 
@@ -149,9 +149,9 @@ This keeps error handling predictable and testable across layers.
 Result works naturally with Bloc-style state machines.
 
 Typical flow:
-• Repository returns Result
-• Bloc folds Result into states
-• UI reacts to explicit states
+- Repository returns Result
+- Bloc folds Result into states
+- UI reacts to explicit states
 
 Example:
 
@@ -168,15 +168,15 @@ emit(
 
 This avoids implicit branching and keeps state transitions explicit.
 
-## Adapters (optional)
+## Adapters (optional) (in development)
 
 This package includes optional adapters to map HTTP responses into Result types.
 
 For example:
-• HTTP 200 → Success
-• HTTP 401 → UnauthorizedError
-• Invalid JSON → ParsingError
-• Network failure → NetworkError
+- HTTP 200 → Success
+- HTTP 401 → UnauthorizedError
+- Invalid JSON → ParsingError
+- Network failure → NetworkError
 
 Adapters are intentionally thin and opinionated.
 They exist to demonstrate error boundaries, not to abstract HTTP clients.
@@ -184,29 +184,29 @@ They exist to demonstrate error boundaries, not to abstract HTTP clients.
 ## Trade-offs
 
 Using Result introduces:
-• slightly more boilerplate
-• more explicit code paths
+- slightly more boilerplate
+- more explicit code paths
 
 In return, you get:
-• clearer control flow
-• easier testing
-• fewer hidden edge cases
-• code that scales better over time
+- clearer control flow
+- easier testing
+- fewer hidden edge cases
+- code that scales better over time
 
 This is a deliberate trade-off.
 
 ## When NOT to use this
 
-• Very small scripts or throwaway prototypes
-• Codebases where exceptions are already strictly managed and documented
-• Teams that prefer implicit control flow
+- Very small scripts or throwaway prototypes
+- Codebases where exceptions are already strictly managed and documented
+- Teams that prefer implicit control flow
 
 ## Philosophy
 
 This package favors:
-• explicit over implicit
-• readable over clever
-• boring over surprising
+- explicit over implicit
+- readable over clever
+- boring over surprising
 
 If something feels verbose, it is usually because the complexity already existed — this package simply makes it visible.
 

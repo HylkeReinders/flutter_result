@@ -33,3 +33,8 @@ The API surface is intentionally small and opinionated.
 ## 0.0.2
 
 Updated the README.md.
+
+
+## 0.0.3
+
+Updated the README.md for readability.

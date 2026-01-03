@@ -2,7 +2,7 @@ name: coffee_result
 description: >
   Explicit and readable Result handling for Dart & Flutter.
   Model success and failure without exceptions, nulls, or deeply nested conditionals.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/HylkeReinders/flutter_result
 repository: https://github.com/HylkeReinders/flutter_result
 issue_tracker: https://github.com/HylkeReinders/flutter_result/issues

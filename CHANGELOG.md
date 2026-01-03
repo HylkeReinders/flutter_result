@@ -29,3 +29,7 @@ Initial release.
 ### Notes
 This release focuses on clarity, explicit control flow, and production-minded defaults.
 The API surface is intentionally small and opinionated.
+
+## 0.0.2
+
+Updated the README.md.

@@ -1,4 +1,4 @@
-flutter_result
+# flutter_result
 
 Explicit, readable result handling for Dart & Flutter.
 
@@ -6,9 +6,9 @@ This package provides a small Result<T, E> abstraction to model success and fail
 
 It is designed for production codebases where clarity and long-term maintainability matter more than clever abstractions.
 
-⸻
+---
 
-The problem
+## The problem
 
 In many Dart and Flutter codebases, failure is handled using:
 • try/catch blocks scattered across layers
@@ -24,18 +24,18 @@ These approaches tend to:
 
 This package exists to make success and failure explicit, predictable, and readable.
 
-⸻
+---
 
-Design goals
+## Design goals
 • Explicit control flow over hidden magic
 • Readable code that still makes sense a year later
 • Small, focused API surface
 • No dependency on functional programming frameworks
 • Easy integration with Bloc and layered architectures
 
-⸻
+---
 
-Non-goals
+## Non-goals
 • This is not a full functional programming library
 • This does not try to replace exceptions everywhere
 • This does not introduce code generation
@@ -43,13 +43,13 @@ Non-goals
 
 If you are looking for advanced FP constructs or heavy abstractions, this package is likely not a good fit.
 
-⸻
+---
 
-Core concept
+## Core concept
 
 A Result<T, E> represents either:
-• a successful value of type T
-• a failure of type E
+- a successful value of type T
+- a failure of type E
 
 Both cases must be handled explicitly.
 
@@ -66,9 +66,9 @@ return result.fold(
 
 There is no implicit success, no silent failure, and no nested conditionals.
 
-⸻
+---
 
-Basic usage
+## Basic usage
 
 Creating results:
 
@@ -99,9 +99,9 @@ repository
     .andThen(saveUser);
 ```
 
-⸻
+---
 
-Guarding exceptions
+## Guarding exceptions
 
 In production code, exceptions still happen.
 This package allows you to contain them at the boundary.
@@ -126,9 +126,9 @@ final result = await Result.guardAsync(
 
 After this point, your application logic no longer needs try/catch.
 
-⸻
+---
 
-Error modeling
+## Error modeling
 
 Instead of using strings or generic exceptions, this package encourages explicit error modeling.
 
@@ -155,9 +155,9 @@ final class UnexpectedError extends AppError {
 
 This keeps error handling predictable and testable across layers.
 
-⸻
+---
 
-Integration with Bloc
+## Integration with Bloc
 
 Result works naturally with Bloc-style state machines.
 
@@ -179,9 +179,9 @@ emit(
 ```
 This avoids implicit branching and keeps state transitions explicit.
 
-⸻
+---
 
-Adapters (optional)
+## Adapters (optional)
 
 This package includes optional adapters to map HTTP responses into Result types.
 
@@ -194,9 +194,9 @@ For example:
 Adapters are intentionally thin and opinionated.
 They exist to demonstrate error boundaries, not to abstract HTTP clients.
 
-⸻
+---
 
-Trade-offs
+## Trade-offs
 
 Using Result introduces:
 • slightly more boilerplate
@@ -210,16 +210,16 @@ In return, you get:
 
 This is a deliberate trade-off.
 
-⸻
+---
 
-When NOT to use this
+## When NOT to use this
 • Very small scripts or throwaway prototypes
 • Codebases where exceptions are already strictly managed and documented
 • Teams that prefer implicit control flow
 
-⸻
+---
 
-Philosophy
+## Philosophy
 
 This package favors:
 • explicit over implicit
@@ -228,16 +228,16 @@ This package favors:
 
 If something feels verbose, it is usually because the complexity already existed — this package simply makes it visible.
 
-⸻
+---
 
-Status
+## Status
 
 This package is actively being developed and refined based on real-world usage.
 
 Breaking changes will be avoided where possible and documented clearly when unavoidable.
 
-⸻
+---
 
-License
+## License
 
 MIT

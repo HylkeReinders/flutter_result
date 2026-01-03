@@ -1,3 +1,3 @@
-import 'package:flutter_result/src/result.dart';
+import 'result.dart';
 
 typedef AsyncResult<T, E> = Future<Result<T, E>>;

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_result/flutter_result.dart';
+import 'package:coffee_result/coffee_result.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,4 +1,4 @@
-name: flutter_result
+name: coffee_result
 description: >
   Explicit and readable Result handling for Dart & Flutter.
   Model success and failure without exceptions, nulls, or deeply nested conditionals.

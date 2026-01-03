@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_result/flutter_result.dart';
+import 'package:coffee_result/flutter_result.dart';
 
 void main() {
   group('Result core', () {
